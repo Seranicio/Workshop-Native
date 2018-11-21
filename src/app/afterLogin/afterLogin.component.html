@@ -1,0 +1,12 @@
+<GridLayout rows="10,*,10,auto">
+    <GridLayout row="1" rows="*,*,*,*,*,*,*,*,*" columns="10,*,*,*,*,*,*,*,*,*,10">
+        <div *ngFor="let c of [0, 1, 2,3,4,5,6,7,8]">
+            <TextField class="sudokuInputs"  maxLength="1" keyboardType="number" [(ngModel)]="jsonlvl[l][c]"
+            [row]="l" [col]="c+1" hint="" text="" *ngFor="let l of [0, 1, 2,3,4,5,6,7,8]"></TextField>
+        </div>
+    </GridLayout>
+    <GridLayout row="3" columns="*,*">
+        <button class="resetButton" col="0" text="Reset"></button>
+        <button class="confirmButton" col="1" text="Confirm"></button>
+    </GridLayout>
+</GridLayout>

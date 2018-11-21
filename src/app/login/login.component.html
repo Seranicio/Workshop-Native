@@ -1,0 +1,8 @@
+<StackLayout>
+  <TextField [(ngModel)]="_user" class="username" hint="Username" text=""></TextField>
+  <TextField [(ngModel)]="_pass" secure="true" class="password" hint="Password" text=""></TextField>
+  <button (tap)="ulogin()" class="userlogin" text="Login"></button>
+  <button class="facelogin" text="Facebook"></button>
+  <button (tap)="imagepicker()" class="Image" text="Image"></button>
+  <Image [src]="srcImg"></Image>
+</StackLayout>
